@@ -1,0 +1,46 @@
+{
+  "name": "great-wall-admin-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon bin/www",
+    "dev": "pm2 start ecosystem.config.js --env dev",
+    "test": "pm2 start ecosystem.config.js --env test",
+    "prod": "pm2 start ecosystem.config.js --env prod",
+    "logs": "pm2 logs",
+    "stop": "pm2 stop ecosystem.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaotingamy/great-wall-admin-backend.git"
+  },
+  "keywords": [
+    "koa",
+    "admin"
+  ],
+  "author": "guoxt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaotingamy/great-wall-admin-backend/issues"
+  },
+  "homepage": "https://github.com/xiaotingamy/great-wall-admin-backend#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-helmet": "^6.1.0",
+    "koa-jwt": "^4.0.3",
+    "koa-redis": "^4.0.1",
+    "koa-router": "^10.1.1",
+    "koa-static-cache": "^5.1.4",
+    "koa2-cors": "^2.0.6",
+    "log4js": "^6.3.0",
+    "mysql2": "^2.3.3-rc.0",
+    "redis": "^3.1.2",
+    "sequelize": "^6.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

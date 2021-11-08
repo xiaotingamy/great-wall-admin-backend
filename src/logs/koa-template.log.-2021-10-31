@@ -1,0 +1,8 @@
+[2021-10-31T18:05:57.170] [ERROR] [Default] - Error: MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.<anonymous> (/Users/Amy/Documents/firstshow/great-wall-admin-backend/models/index.js:27:16)
+    at NativeConnection.emit (events.js:400:28)
+    at /Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/mongoose/lib/connection.js:807:30
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-10-31T18:06:18.391] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 6ms
+[2021-10-31T18:06:18.558] [INFO] [Default] - GET 404 /favicon.ico 请求参数： {} 响应参数： undefined - ::1 - 1ms
+[2021-10-31T18:11:09.830] [INFO] [Default] - GET 404 /test 请求参数： {} 响应参数： undefined - ::1 - 0ms

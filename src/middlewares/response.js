@@ -3,7 +3,7 @@
  * @Author: guoxt
  * @Date: 2021-10-31 16:11:29
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-08 20:03:40
+ * @LastEditTime: 2021-11-08 20:06:11
  */
 
 const { logger } = require('./logger')
@@ -30,6 +30,7 @@ const errorHandler = (ctx, next) => {
       logger.error(err.stack)
     }
     ctx.body = {
+      success: false,
       errorCode: err.code || -1,
       data: null,
       errorMsg: err.message.trim()

@@ -4,17 +4,22 @@
  * @Author: guoxt
  * @Date: 2021-11-07 17:43:49
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-07 18:00:14
+ * @LastEditTime: 2021-11-09 07:16:25
  */
 
 const Sequelize = require('sequelize')
 const { MYSQL_CONF } = require('../conf/db')
-const { isProd } = require('../lib/env')
+const { isProd, isTest } = require('../lib/env')
 
 const { host, user, password, database } = MYSQL_CONF
 const conf = {
   host,
   dialect: 'mysql'
+}
+
+// 走测试用例，不打印sql语句
+if (isTest) {
+  conf.logging = () => {}
 }
 
 // 线上环境，使用连接池
@@ -26,5 +31,6 @@ if (isProd) {
   }
 }
 const seq = new Sequelize(database, user, password, conf)
+
 
 module.exports = seq

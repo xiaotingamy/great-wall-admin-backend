@@ -1,0 +1,32 @@
+[2021-11-02T22:04:09.808] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 6ms
+[2021-11-02T22:04:10.015] [INFO] [Default] - GET 404 /favicon.ico 请求参数： {} 响应参数： undefined - ::1 - 2ms
+[2021-11-02T22:04:24.317] [INFO] [Default] - GET 404 /profile/88 请求参数： {} 响应参数： undefined - ::1 - 1ms
+[2021-11-02T22:04:24.540] [ERROR] [Default] - Error: MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.<anonymous> (/Users/Amy/Documents/firstshow/great-wall-admin-backend/models/index.js:27:16)
+    at NativeConnection.emit (events.js:400:28)
+    at /Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/mongoose/lib/connection.js:807:30
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-11-02T22:08:34.363] [INFO] [Default] - GET 404 /profile/88 请求参数： {} 响应参数： undefined - ::1 - 6ms
+[2021-11-02T22:08:35.429] [INFO] [Default] - GET 404 /profile/88 请求参数： {} 响应参数： undefined - ::1 - 2ms
+[2021-11-02T22:08:36.665] [INFO] [Default] - GET 404 /profile/88 请求参数： {} 响应参数： undefined - ::1 - 0ms
+[2021-11-02T22:08:39.453] [INFO] [Default] - GET 404 / 请求参数： {} 响应参数： undefined - ::1 - 1ms
+[2021-11-02T22:14:36.728] [INFO] [Default] - GET 200 /api/profile/zhangshan 请求参数： {} 响应参数： {"title":"this is a profile","username":"zhangshan"} - ::1 - 1ms
+[2021-11-02T22:20:34.918] [ERROR] [Default] - Error: MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.<anonymous> (/Users/Amy/Documents/firstshow/great-wall-admin-backend/models/index.js:27:16)
+    at NativeConnection.emit (events.js:400:28)
+    at /Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/mongoose/lib/connection.js:807:30
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-11-02T22:20:56.338] [INFO] [Default] - GET 200 /api/profile/zhangshan 请求参数： {} 响应参数： {"title":"this is a profile","username":"zhangshan"} - ::1 - 7ms
+[2021-11-02T22:21:17.898] [ERROR] [Default] - Error: MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at NativeConnection.<anonymous> (/Users/Amy/Documents/firstshow/great-wall-admin-backend/models/index.js:27:16)
+    at NativeConnection.emit (events.js:400:28)
+    at /Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/mongoose/lib/connection.js:807:30
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-11-02T22:28:53.475] [INFO] [Default] - POST 200 /login 请求参数： undefined 响应参数： {"code":-1,"data":null,"msg":"Unexpected token u in JSON at position 3"} - ::1 - 21ms
+[2021-11-02T22:34:12.920] [INFO] [Default] - POST 200 /login 请求参数： undefined 响应参数： {"code":-1,"data":null,"msg":"Unexpected token u in JSON at position 3"} - ::1 - 20ms
+[2021-11-02T22:36:30.681] [INFO] [Default] - POST 200 /login 请求参数： undefined 响应参数： {"code":-1,"data":null,"msg":"invalid JSON, only supports object and array"} - ::1 - 1ms
+[2021-11-02T22:36:56.594] [INFO] [Default] - POST 404 /login 请求参数： {"username":"zhangsan","password":"99"} 响应参数： undefined - ::1 - 5ms
+[2021-11-02T22:37:09.830] [INFO] [Default] - POST 200 /api/login 请求参数： {"username":"zhangsan","password":"99"} 响应参数： {"title":"this is a login post","username":"zhangsan","password":"99"} - ::1 - 1ms
+[2021-11-02T22:37:15.993] [INFO] [Default] - POST 200 /api/login 请求参数： {} 响应参数： {"title":"this is a login post"} - ::1 - 1ms
+[2021-11-02T22:37:27.873] [INFO] [Default] - POST 200 /api/login 请求参数： undefined 响应参数： {"code":-1,"data":null,"msg":"Unexpected token u in JSON at position 3"} - ::1 - 0ms
+[2021-11-02T22:37:50.091] [INFO] [Default] - POST 200 /api/login 请求参数： {"username":"zhangsan","password":"adjjd"} 响应参数： {"title":"this is a login post","username":"zhangsan","password":"adjjd"} - ::1 - 1ms

@@ -4,7 +4,7 @@
  * @Author: guoxt
  * @Date: 2021-11-07 18:25:24
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-08 15:05:35
+ * @LastEditTime: 2021-11-08 23:41:52
  */
 
 class BaseModel {
@@ -17,7 +17,7 @@ class BaseModel {
       this.data = data
     }
     if (errorMsg) {
-      this.message = errorMsg
+      this.errorMsg = errorMsg
     }
   }
 }

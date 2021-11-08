@@ -4,7 +4,7 @@
  * @Author: guoxt
  * @Date: 2021-11-07 18:19:20
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-08 15:39:48
+ * @LastEditTime: 2021-11-08 23:39:00
  */
 const {
 	getUserInfo,
@@ -29,9 +29,11 @@ user.register = async (ctx, next) => {
 	const { username, password, nickname, sex } = ctx.request.body
 	console.log(username, password, 'username')
 	const userInfo = await getUserInfo(username)
+	console.log(userInfo, 'userInfo')
 	if (userInfo) {
 		// 用户名已存在
 		ctx.errorInfo = registerUserNameExistInfo
+		return next()
 	}
 	try {
 		await createUserInfo(username, password, nickname, sex)

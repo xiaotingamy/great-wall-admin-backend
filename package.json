@@ -6,10 +6,10 @@
   "scripts": {
     "start": "./node_modules/.bin/nodemon bin/www",
     "dev": "pm2 start ecosystem.config.js --env dev",
-    "test": "pm2 start ecosystem.config.js --env test",
     "prod": "pm2 start ecosystem.config.js --env prod",
     "logs": "pm2 logs",
-    "stop": "pm2 stop ecosystem.config.js"
+    "stop": "pm2 stop ecosystem.config.js",
+    "test": "jest --runInBand --forceExit --colors"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,8 @@
     "sequelize": "^6.9.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.14"
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.14",
+    "supertest": "^6.1.6"
   }
 }

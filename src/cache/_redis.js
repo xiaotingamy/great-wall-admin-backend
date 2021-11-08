@@ -4,7 +4,7 @@
  * @Author: guoxt
  * @Date: 2021-11-07 15:56:46
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-08 10:08:50
+ * @LastEditTime: 2021-11-08 22:31:20
  */
 
 const redis = require("redis");
@@ -59,7 +59,6 @@ function get (key) {
     })
   })
 }
-
 
 module.exports = {
   set,

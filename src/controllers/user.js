@@ -4,7 +4,7 @@
  * @Author: guoxt
  * @Date: 2021-11-07 18:19:20
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-08 23:39:00
+ * @LastEditTime: 2021-11-09 07:57:14
  */
 const {
   getUserInfo,
@@ -26,6 +26,7 @@ const user = {}
  * @return {*}
  */
 user.register = async (ctx, next) => {
+  // debugger
   const { username, password, nickname, sex } = ctx.request.body
   console.log(username, password, 'username')
   const userInfo = await getUserInfo(username)

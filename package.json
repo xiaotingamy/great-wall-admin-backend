@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon bin/www",
+    "start": "./node_modules/.bin/nodemon --inspect=9229 bin/www",
     "dev": "pm2 start ecosystem.config.js --env dev",
     "prod": "pm2 start ecosystem.config.js --env prod",
     "logs": "pm2 logs",

@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pm2 delete all & pm2 start ecosystem.config.js --env development",
-    "test": "pm2 delete all & pm2 start ecosystem.config.js --env test & jest --runInBand --forceExit --colors",
+    "dev": "pm2 start ecosystem.config.js --env development --watch",
+    "test": "pm2 start ecosystem.config.js --env test --watch & jest --runInBand --forceExit --colors",
     "prod": "pm2 start ecosystem.config.js --env production",
-    "stop": "pm2 stop ecosystem.config.js",
+    "stop": "pm2 stop ecosystem.config.js --watch",
     "logs": "pm2 logs",
     "lint": "eslint --ext .js ./src"
   },

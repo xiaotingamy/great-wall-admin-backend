@@ -3,11 +3,11 @@ module.exports = {
     name: 'GREAT_WALL_BACKEND',
     script: './bin/www',
     autorestart: true,
-    watch: true,
-    ignore_watch: [
-      'node_modules',
-      'src/logs'
-    ],
+    // watch: true,
+    // ignore_watch: [
+    //   'node_modules',
+    //   'src/logs'
+    // ],
     node_args: ['--inspect=9229'],
     env_production: {
       NODE_ENV: 'production'

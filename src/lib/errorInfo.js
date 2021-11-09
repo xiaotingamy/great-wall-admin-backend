@@ -4,7 +4,7 @@
  * @Author: guoxt
  * @Date: 2021-11-07 18:22:25
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-09 10:34:12
+ * @LastEditTime: 2021-11-09 18:41:41
  */
 module.exports = {
   // 登录失败
@@ -19,7 +19,7 @@ module.exports = {
   },
   registerUserNameExistInfo: {
     errorCode: 40202,
-    errorMsg: '用户已存在'
+    errorMsg: '用户已存在..'
   },
   // 注册失败
   registerFailInfo: {

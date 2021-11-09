@@ -27,3 +27,20 @@
 [2021-11-09T10:32:11.973] [INFO] [Default] - POST 200 /api/public/user/register 请求参数： {"username":"lisi2","password":"123456","nickname":"anne","sex":3} 响应参数： {"success":false,"errorCode":40202,"errorMsg":"用户已存在"} - ::1 - 131ms
 [2021-11-09T10:32:43.131] [INFO] [Default] - POST 200 /api/public/user/register 请求参数： {"username":"lisi2","password":"123456","nickname":"anne","sex":3} 响应参数： {"success":false,"errorCode":40202,"errorMsg":"用户已存在..."} - ::1 - 109ms
 [2021-11-09T10:33:01.000] [INFO] [Default] - POST 200 /api/public/user/register 请求参数： {"username":"lisi2","password":"123456","nickname":"anne","sex":3} 响应参数： {"success":false,"errorCode":40202,"errorMsg":"用户已存在..."} - ::1 - 26ms
+[2021-11-09T18:35:36.262] [INFO] [Default] - POST 200 /api/public/user/register 请求参数： {"username":"lisi2","password":"123456","nickname":"anne","sex":3} 响应参数： {"success":true,"data":{}} - ::1 - 406ms
+[2021-11-09T18:37:34.729] [INFO] [Default] - POST 200 /api/public/user/login 请求参数： {"username":"lisi2","password":"123456"} 响应参数： {"success":true,"data":{"id":1,"username":"lisi2","nickname":"anne","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoibGlzaTIiLCJpYXQiOjE2MzY0NTQyNTQsImV4cCI6MTYzNjQ2MTQ1NH0.AcPEP-a4NSzfEliqTd629k5LRnbvcNKFiJ7wX_pUcuI"}} - ::1 - 23ms
+[2021-11-09T18:37:59.762] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (/Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/koa/lib/context.js:97:11)
+    at jwt (/Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/koa-jwt/lib/index.js:23:22)
+    at /Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/koa-unless/index.js:29:12
+    at dispatch (/Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/koa-compose/index.js:42:32)
+    at cors (/Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/koa2-cors/dist/index.js:91:15)
+    at dispatch (/Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/koa-compose/index.js:42:32)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async /Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/koa-static-cache/index.js:39:63
+    at async bodyParser (/Users/Amy/Documents/firstshow/great-wall-admin-backend/node_modules/koa-bodyparser/index.js:95:5)
+    at async loggerMiddleware (/Users/Amy/Documents/firstshow/great-wall-admin-backend/src/middlewares/logger.js:32:3)
+[2021-11-09T18:37:59.762] [INFO] [Default] - POST 200 /api/create/blog 请求参数： {"title":"标题3","content":"内容3"} 响应参数： {"success":false,"errorCode":-1,"data":null,"errorMsg":"Authentication Error"} - ::1 - 3ms
+[2021-11-09T18:38:22.703] [INFO] [Default] - POST 200 /api/create/blog 请求参数： {"title":"标题3","content":"内容3"} 响应参数： {"success":true,"data":{"id":1,"userId":1,"content":"内容3","title":"标题3","updatedAt":"2021-11-09T10:38:22.644Z","createdAt":"2021-11-09T10:38:22.644Z"}} - ::1 - 66ms
+[2021-11-09T18:41:57.764] [INFO] [Default] - POST 200 /api/public/user/register 请求参数： {"username":"lisi2","password":"123456","nickname":"anne","sex":3} 响应参数： {"success":false,"errorCode":40202,"errorMsg":"用户已存在..."} - ::1 - 111ms
+[2021-11-09T18:42:06.530] [INFO] [Default] - POST 200 /api/public/user/register 请求参数： {"username":"lisi2","password":"123456","nickname":"anne","sex":3} 响应参数： {"success":false,"errorCode":40202,"errorMsg":"用户已存在.."} - ::1 - 89ms

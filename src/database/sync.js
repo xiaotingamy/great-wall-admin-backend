@@ -4,7 +4,7 @@
  * @Author: guoxt
  * @Date: 2021-11-07 17:55:24
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-08 10:13:48
+ * @LastEditTime: 2021-11-09 14:12:31
  */
 const seq = require('./seq')
 
@@ -18,7 +18,7 @@ seq.authenticate().then(() => {
 })
 
 // 执行同步
-seq.sync({ force: true }).then(() => {
+seq.sync().then(() => {
   console.log('sync ok')
   process.exit()
 })

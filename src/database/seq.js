@@ -4,10 +4,9 @@
  * @Author: guoxt
  * @Date: 2021-11-07 17:43:49
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-09 07:16:25
+ * @LastEditTime: 2021-11-09 13:55:37
  */
-
-const Sequelize = require('sequelize')
+const { Sequelize } = require('sequelize')
 const { MYSQL_CONF } = require('../conf/db')
 const { isProd, isTest } = require('../lib/env')
 

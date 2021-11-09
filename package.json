@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon --inspect=9229 bin/www",
-    "dev": "pm2 start ecosystem.config.js --env dev",
-    "prod": "pm2 start ecosystem.config.js --env prod",
-    "logs": "pm2 logs",
+    "dev": "pm2 delete all & pm2 start ecosystem.config.js --env development",
+    "test": "pm2 delete all & pm2 start ecosystem.config.js --env test & jest --runInBand --forceExit --colors",
+    "prod": "pm2 start ecosystem.config.js --env production",
     "stop": "pm2 stop ecosystem.config.js",
-    "test": "jest --runInBand --forceExit --colors",
+    "logs": "pm2 logs",
     "lint": "eslint --ext .js ./src"
   },
   "repository": {
@@ -44,7 +43,6 @@
   "devDependencies": {
     "eslint": "^8.2.0",
     "jest": "^27.3.1",
-    "nodemon": "^2.0.14",
     "supertest": "^6.1.6"
   }
 }

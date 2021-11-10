@@ -1,10 +1,10 @@
 /*
- * @Description:
+ * @Description: XX模块路由
  * @version:
  * @Author: guoxt
  * @Date: 2021-10-31 15:45:40
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-09 22:35:35
+ * @LastEditTime: 2021-11-09 22:58:51
  */
 const Router = require('koa-router')
 const controllers = require('../controllers')
@@ -16,6 +16,6 @@ const router = new Router()
 router.prefix('/api')
 router.use(jwtMiddleware)
 
-router.post('/test', loginCheck, controllers.blog.create)
+router.post('/create/blog', loginCheck, controllers.blog.create)
 
 module.exports = router

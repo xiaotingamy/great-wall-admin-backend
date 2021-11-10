@@ -2,13 +2,17 @@ module.exports = {
   apps : [{
     name: 'GREAT_WALL_BACKEND',
     script: './bin/www',
+    instances: '4',
     autorestart: true,
-    // watch: true,
-    // ignore_watch: [
-    //   'node_modules',
-    //   'src/logs'
-    // ],
+    watch: true,
+    ignore_watch: [
+      'node_modules',
+      'src/logs'
+    ],
     node_args: ['--inspect=9229'],
+    error_file: './src/logs/err.log',
+    out_file: './src/logs/out.log',
+    log_date_format: 'YYYY-MM-DD HH:mm:ss',
     env_production: {
       NODE_ENV: 'production'
     },

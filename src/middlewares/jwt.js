@@ -4,7 +4,7 @@
  * @Author: guoxt
  * @Date: 2021-10-31 16:11:37
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-08 19:55:13
+ * @LastEditTime: 2021-11-09 22:56:36
  */
 const jwt = require('jsonwebtoken')
 const { JWT_SECRET_KEY } = require('../conf/secretKeys')
@@ -16,7 +16,6 @@ module.exports = async function (ctx, next) {
     if (typeof ctx.request.headers.authorization === 'string') {
       const token = ctx.request.headers.authorization.slice(7)
       ctx.jwtData = jwt.verify(token, JWT_SECRET_KEY)
-      console.log(ctx.jwtData, 'jwtData')
     } else {
       throw new ForbiddenError('未授权')
     }

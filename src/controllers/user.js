@@ -4,13 +4,10 @@
  * @Author: guoxt
  * @Date: 2021-11-07 18:19:20
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-09 07:57:14
+ * @LastEditTime: 2021-11-10 09:48:38
  */
-const {
-  getUserInfo,
-  createUserInfo
-} = require('../services/user')
 const { loginFailInfo, registerUserNameExistInfo, registerFailInfo } = require('../lib/errorInfo')
+const userServices = require('../services').user
 const { InvalidQueryError } = require('../lib/error')
 
 const jwt = require('jsonwebtoken')
@@ -28,16 +25,14 @@ const user = {}
 user.register = async (ctx, next) => {
   // debugger
   const { username, password, nickname, sex } = ctx.request.body
-  console.log(username, password, 'username')
-  const userInfo = await getUserInfo(username)
-  console.log(userInfo, 'userInfo')
+  const userInfo = await userServices.getUserInfo(username)
   if (userInfo) {
     // 用户名已存在
     ctx.errorInfo = registerUserNameExistInfo
     return next()
   }
   try {
-    await createUserInfo(username, password, nickname, sex)
+    await userServices.createUserInfo(username, password, nickname, sex)
     ctx.result = {}
   } catch (ex) {
     ctx.errorInfo = registerFailInfo
@@ -58,7 +53,7 @@ user.login = async (ctx, next) => {
   if (!username || !password) {
     throw new InvalidQueryError()
   }
-  const userInfo = await getUserInfo(username, password)
+  const userInfo = await userServices.getUserInfo(username, password)
   if (!userInfo) {
     // 登录失败
     ctx.errorInfo = loginFailInfo

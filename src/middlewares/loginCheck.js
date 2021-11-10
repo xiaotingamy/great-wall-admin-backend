@@ -4,7 +4,7 @@
  * @Author: guoxt
  * @Date: 2021-11-08 13:35:47
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-08 19:47:51
+ * @LastEditTime: 2021-11-09 22:56:41
  */
 
 const { ErrorModel } = require('../lib/resModel')
@@ -17,7 +17,6 @@ const { loginCheckFailInfo } = require('../lib/errorInfo')
  */
 async function loginCheck (ctx, next) {
   if (ctx.jwtData && ctx.jwtData.userId) {
-    console.log('jwtData', ctx.jwtData)
     // 已登录
     await next()
     return

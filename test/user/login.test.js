@@ -4,7 +4,7 @@
  * @Author: guoxt
  * @Date: 2021-11-08 23:21:45
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-08 23:40:42
+ * @LastEditTime: 2021-11-09 22:56:47
  */
 const server = require('../server')
 
@@ -27,7 +27,6 @@ test('注册一个用户，应该成功', async () => {
 // 重复注册
 test('重复注册用户，应该失败', async () => {
   const res = await server.post('/api/public/user/register').send(testUser)
-  console.log(res, 'res')
   expect(res.body.success).toBe(false)
   expect(res.body.errorCode).toBe(40202)
   expect(res.body.errorMsg).toBe('用户已存在')

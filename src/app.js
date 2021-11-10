@@ -4,7 +4,7 @@
  * @Author: guoxt
  * @Date: 2021-10-31 15:27:24
  * @LastEditors: guoxt
- * @LastEditTime: 2021-11-08 16:36:11
+ * @LastEditTime: 2021-11-09 22:29:31
  */
 'use strict'
 
@@ -22,7 +22,7 @@ const { JWT_SECRET_KEY } = require('./conf/secretKeys')
 // 路由
 const publicRouter = require('./routes/public')
 const privateRouter = require('./routes/private')
-// const userAPIRouter = require('./routes/user')
+const blogAPIRouter = require('./routes/blog')
 
 const { loggerMiddleware } = require('./middlewares/logger')
 const { errorHandler, responseHandler } = require('./middlewares/response')
@@ -53,7 +53,7 @@ app.use(koaJwt({ secret: JWT_SECRET_KEY }).unless({ path: [/^\/api\/public/] }))
 // 调用router.allowedMethods()获得一个中间件，当发送了不符合的请求时，会返回 `405 Method Not Allowed` 或 `501 Not Implemented`
 app.use(publicRouter.routes(), publicRouter.allowedMethods())
 app.use(privateRouter.routes(), privateRouter.allowedMethods())
-// app.use(userAPIRouter.routes(), userAPIRouter.allowedMethods())
+app.use(blogAPIRouter.routes(), blogAPIRouter.allowedMethods())
 
 // response
 app.use(responseHandler)
